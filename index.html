@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- twitter card - image/favicon beachten-->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@bella_mrx" />
+    <meta name="twitter:url" content="https://book-of-coding.com/" />
+    <meta name="twitter:title" content="Book-of-Coding.com - bla bla bla" />
+    <meta name="twitter:description" content="Book of Coding - bla bla bla" />
+    <meta name="twitter:image" content="https://book-of-coding.com/images/favicon-x-preview-144x144.png">
+    <!-- twitter card end -->
+
+    <!-- description 150 - 170 characters -->
+    <meta name="description" content="bla bla bla" />
+    <!-- google -->
+    <meta name="google-site-verification" content="FFoNJXBALjYFhCIq5P5V7-DijBqcltFbJOxU--zoMag" />
+    <!-- google analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GS39T8B3C4"></script> 
+
+    <!-- favicon - wenn dann favicon vorher erstellen-->
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">  
+    <!-- favicon end -->
+
+    <!-- FontAwesome -->
+    <link href="assets/fontawesome/css/fontawesome.css" rel="stylesheet">
+    <link href="assets/fontawesome/css/brands.css" rel="stylesheet">
+    <link href="assets/fontawesome/css/solid.css" rel="stylesheet">
+    
+    <link rel="stylesheet" type="text/css" id="mode-link" href="styles/style.css">
+    <!-- title 50 -70 characters -->
+    <title>Title</title>
+  </head>
+
+  <body>
+    <!-- visuel -->
+    <div id="canvas-container">
+        <canvas id="canvas" width="900" height="256"></canvas>
+    </div>
+    <div id="controls">
+       
+    </div>
+    <audio>
+        This web browser does not support audio tag.
+    </audio>
+    <div>
+        <!-- audio control panel -->
+        <button onclick="play()" id="play">Play</button>
+        <button onclick="fast()" id="fast">2x</button>
+
+        <button onclick="norm()" id="norm">1</button>
+        <button onclick="slow()" id="slow">-0.1</button>
+        
+        <button onclick="rewind()">Rewind</button>
+        <button onclick="mute()" id="mute">Sound off</button>
+        <button onclick="control()" id="ctrl">Display controls</button>
+        <!-- file upload -->
+        <input id="audioFile" type="file" accept="audio/*" />
+    </div>
+    <script src="scripts/script3.js"></script>
+    <!-- google analytics -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'G-GS39T8B3C4');
+    </script>
+  </body>
+</html>
