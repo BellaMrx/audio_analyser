@@ -1,7 +1,12 @@
 // VISUEL
 context = new AudioContext();
 // set context for canvas(analyser - visual effect)
-var ctx = document.getElementById('canvas').getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+
+canvas.width = 900;
+canvas.height = 256;
+
 // rainbow gradient and set fill style
 var gradient = ctx.createLinearGradient(0, 0, 0, 256);
 gradient.addColorStop(0, '#ff0000');
@@ -16,6 +21,9 @@ gradient.addColorStop(0.93, '#ba0cf8');
 gradient.addColorStop(1, '#fb07d9');
 ctx.fillStyle = gradient;
 
+/* In order to be able to retrieve the output directly from the sound card, i.e. not via the microphone, 
+a setting must be made. For Realtek: "Stereo mix" must be set for "Recording" in the sound settings. 
+Otherwise it will only work via the microphone. */
 var analyser = context.createAnalyser();
 analyser.fftsize = 2048;
 analyser.smoothingTimeConstant = 0.95;
@@ -61,13 +69,12 @@ function play() {
   let play = document.querySelector('#play');
   if (aud.paused) {
     aud.play();
-    play.textContent = "--Pause--";
+    play.textContent = "Pause";
   } else {
     aud.pause();
     play.textContent = "Play";
   }
 }
-
 // 1x/2x speed
 function fast() {
   let play = document.querySelector('#fast');
@@ -78,27 +85,7 @@ function fast() {
     aud.playbackRate = 1.0;
     play.textContent = "2x";
   }
-}
-
-
-
-
-
-// 1x/2x speed
-function slow() {
-    let play = document.querySelector('#slow');
-    aud.playbackRate -= 0.1;
-    var slowDis = -0.1;
-    play.innerHTML -= slowDis;
-  }
-// 1x/2x speed
-function norm() {
-    aud.playbackRate = 1;
-  }
-
-
-
-  
+}  
 // start audio from beginning
 function rewind() {
   aud.currentTime = 0;
@@ -108,7 +95,7 @@ function mute() {
   let mtxt = document.querySelector('#mute');
   if (aud.muted) {
     aud.muted = false;
-    mtxt.textContent = "Sound off";
+    mtxt.textContent = "Mute";
   } else {
     aud.muted = true;
     mtxt.textContent = "Sound on";

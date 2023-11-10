@@ -1,42 +1,85 @@
+* {
+    box-sizing: border-box;
+}
 body {
-    font-family: Arial, sans-serif;
+    font-family: Helvetica, sans-serif;
     background-color: #111;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
 }
-
-#canvas-container {
-    position: relative;
+h1 {
+    text-align: center;
+    color: #333;
+    text-shadow: 1px 1px 2px #999;
+    font-size: 2rem;
+    margin-top: 2.5em;
 }
-
 #canvas {
-    border: 1px solid #444;
+    padding: 0;
+    margin: auto;
+    display: block;
+    margin-top: 1em;
+    border: 1px solid #333;
     background-color: #000;
 }
-
+/* audio panel */
+audio {
+    padding: 0;
+    margin: auto;
+    display: block;
+    margin-top: 1em;
+    width: 50%;
+    border: 1px solid #999;
+    border-radius: 2px;
+}
+/* button control panel */
 #controls {
-    display: flex;
+    display: flex;    
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 1em;
 }
-
-#controls input[type="range"] {
-    width: 200px;
-}
-
 #controls button {
-    margin: 0 10px;
-    padding: 10px 20px;
-    background-color: #FF5733;
-    border: none;
-    color: #fff;
-    cursor: pointer;
+    color: #999;
+    background-color: #333;
+    text-align: center;
+    border: 1px solid #999;
+    padding: 5px 10px;
+    margin: 5px;
+    font-weight: 500;
+    border-radius: 2px;
+    box-shadow: 2px 2px #999;
+    transition: 1s; 
 }
+  #controls button:hover {
+    box-shadow: none;
+  }
+  #controls button:focus {
+    box-shadow: none;
+  }
+/* file upload */
+#controls input {
+    color: #999;
+    background-color: #333;
+    text-align: center;
+    border: 1px solid #999;
+    padding: 5px 10px;
+    margin: 5px;
+    font-weight: 500;
+    border-radius: 2px;
+}
+  #controls input[type=file]::file-selector-button {
+    background-color: #333;
+    color: #eee;
+    border-radius: 2px;
+    border: 1px solid #999;
+    padding: 3px 4px;
+    box-shadow: 1px 1px #999;
+    transition: 1s;
+  }
+  #controls input[type=file]::file-selector-button:hover {
+    background-color: #111;
+    color: #ccc;
+    box-shadow: none;
+  }
 
 
 
