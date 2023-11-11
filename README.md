@@ -24,6 +24,12 @@ createMediaStreamSource :
 https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/createMediaStreamSource
 
 
+playbackRate :
+
+https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/playbackRate
+
+
+
 Preview:
 
 ![Preview](images/Preview_Audio_Analyzer.png)
